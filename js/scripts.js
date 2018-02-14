@@ -143,21 +143,21 @@ AmenityData.forEach(function(AmenityObject) {
     weight: 2,
   };
 
-  var marker = L.circleMarker(latLon, options)
-      .bindPopup(AmenityObject.name {offset: [0, -6]})
-      .addTo(map)
-  // add the marker to the markersArray
+  // var marker = L.circleMarker(latLon, options)
+  //     .bindPopup(AmenityObject.name{offset: [0, -6]})
+  //     .addTo(map)
+  // // add the marker to the markersArray
   markersArray.push(marker);
 });
 
-// $('.fly-to-random').click(function(e) {
-//   var randomMarker = markersArray[Math.floor(Math.random() * markersArray.length)];
-//   map.setView(randomMarker._latlng);
-//   randomMarker.openPopup();
-//   e.stopPropagation();
-// });
-//
-//
-// $('.reset').click(function() {
-//   map.flyTo(defaultCenter, defaultZoom)
-// });
+  var randomMarker = markersArray[Math.floor(Math.random() * markersArray.length)];
+$('.fly-to-random').click(function(e) {
+  map.setView(randomMarker._latlng);
+  randomMarker.openPopup();
+  e.stopPropagation();
+});
+
+
+$('.reset').click(function() {
+  map.flyTo(defaultCenter, defaultZoom)
+});
