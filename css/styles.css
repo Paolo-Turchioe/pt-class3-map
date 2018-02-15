@@ -26,7 +26,7 @@ button {
   outline: none;
   padding: 6px;
   background-color: #e2d6ff;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 #legend {
@@ -47,20 +47,20 @@ button {
   -moz-border-radius: 7.5px;
   -webkit-border-radius: 7.5px;
   border-radius: 16.5px;
-  border: 2px solid #FFF;
+  border: 2px solid black;
   position: relative;
   top: 4px;
   margin-right: 5px;
 }
 
 .Bar::before {
-  background-color: purple;
+  background-color: #f44289;
 }
 
 .Restaurant::before {
-  background-color: green;
+  background-color: #41f4c7;
 }
 
 .Brewery::before {
-  background-color: orange;
+  background-color: #a3432c;
 }

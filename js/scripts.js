@@ -58,14 +58,14 @@ var AmenityData = [
   },
   {
     name: 'Port Morris Distillery ',
-    lat: 40.8162523,
-    lon: -73.9370341,
+    lat: 40.8007379,
+    lon: -73.915575,
     Amenity: 'Brewery and Distillery',
   },
   {
     name: 'The Bronx Brewery',
-    lat: 40.8216602,
-    lon: -73.9321536,
+    lat: 40.8019015,
+    lon: -73.9127877,
     Amenity: 'Brewery and Distillery',
   },
   {
@@ -84,12 +84,6 @@ var AmenityData = [
     name: 'Made in Puerto Rico Bar and Lounge',
     lat: 40.8078357,
     lon: -73.9298237,
-    Amenity: 'Bar',
-  },
-  {
-    name: 'Stadium',
-    lat: 40.8134782,
-    lon: -73.9338056,
     Amenity: 'Bar',
   },
   {
@@ -130,23 +124,23 @@ AmenityData.forEach(function(AmenityObject) {
 
   var AmenityColor = '#FFF';
 
-  if (AmenityObject.Amenity === 'Bar') AmenityColor = 'purple';
-  if (AmenityObject.Amenity === 'Restaurant') AmenityColor = 'green';
-  if (AmenityObject.Amenity === 'Brewery and Distillery') AmenityColor = 'orange';
+  if (AmenityObject.Amenity === 'Bar') AmenityColor = '#f44289';
+  if (AmenityObject.Amenity === 'Restaurant') AmenityColor = '#41f4c7';
+  if (AmenityObject.Amenity === 'Brewery and Distillery') AmenityColor = '#a3432c';
 
   var options = {
     radius: 6,
     opacity: 1,
     fillColor: AmenityColor,
     fillOpacity: 0.9,
-    color: '#FFF',
+    color: 'black',
     weight: 2,
   };
 
-  // var marker = L.circleMarker(latLon, options)
-  //     .bindPopup(AmenityObject.name{offset: [0, -6]})
-  //     .addTo(map)
-  // // add the marker to the markersArray
+  var marker = L.circleMarker(latLon, options)
+      .bindPopup(AmenityObject.name,{offset: [0, -6]})
+      .addTo(map)
+  // add the marker to the markersArray
   markersArray.push(marker);
 });
 
