@@ -1,5 +1,5 @@
-var defaultCenter = [40.836411,-73.912754];
-var defaultZoom = 13;
+var defaultCenter = [40.8169169,-73.918108];
+var defaultZoom = 14;
 var map = L.map('my-map').setView(defaultCenter, defaultZoom);
 
 L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
@@ -144,12 +144,7 @@ AmenityData.forEach(function(AmenityObject) {
   markersArray.push(marker);
 });
 
-  var randomMarker = markersArray[Math.floor(Math.random() * markersArray.length)];
-$('.fly-to-random').click(function(e) {
-  map.setView(randomMarker._latlng);
-  randomMarker.openPopup();
-  e.stopPropagation();
-});
+
 
 
 $('.reset').click(function() {
